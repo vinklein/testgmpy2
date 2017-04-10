@@ -1,6 +1,5 @@
 # distutils: libraries = gmp
 
-#from cpython.ref cimport Py_INCREF
 cdef extern from "Python.h":
     ctypedef struct PyObject:
         pass
@@ -24,4 +23,3 @@ def test():
     cdef PyObject * z = GMPy_MPZ_New(NULL)
     mpz_set_si(MPZ(z),999)
     return <object> z
-    return 1
